@@ -4,7 +4,7 @@
             [simulador.sim.bloque :as bl]))
 
 (defn- bloque-de
-  "Convierte un texto de 4 símbolos en un bloque. Ej: \"a...\" -> [:arena :aire :aire :aire]"
+  "Convierte un texto de bloque. Ej: \"a...\" -> [:arena :aire :aire :aire]"
   [texto]
   (mapv m/simbolo->material texto))
 

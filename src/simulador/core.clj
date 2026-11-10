@@ -1,5 +1,5 @@
 (ns simulador.core
-  (:require [simulador.sim.grilla :as g]
+  (:require [simulador.app.simulacion :as simulacion]
             [simulador.ui.ventana :as ventana])
   (:import [javafx.application Platform]))
 
@@ -7,6 +7,7 @@
   "Punto de entrada del programa."
   [& _argumentos]
   (ventana/iniciar!)
-  ;; Al ejecutar el programa de verdad, cerrar la ventana debe terminarlo.
+  ;; En el programa real, cerrar la ventana termina el programa.
   (Platform/setImplicitExit true)
-  (ventana/abrir-ventana! (g/grilla-vacia 160 120)))
+  (simulacion/iniciar!)
+  (ventana/abrir-ventana!))
