@@ -2,8 +2,8 @@
   (:require [simulador.sim.grilla :as g]))
 
 (defn celdas-del-disco
-  "Celdas [x y] del disco de centro (cx, cy) y radio dado (sección 3):
-   (x - cx)^2 + (y - cy)^2 <= radio^2. Puede incluir celdas fuera de la grilla."
+  "Celdas [x y] del disco de centro (cx, cy) y radio dado :
+   (x - cx)^2 + (y - cy)^2 <= radio^2."
   [cx cy radio]
   (for [y (range (- cy radio) (+ cy radio 1))
         x (range (- cx radio) (+ cx radio 1))

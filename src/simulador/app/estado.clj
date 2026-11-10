@@ -6,7 +6,7 @@
 (def ancho-por-defecto 160)
 (def alto-por-defecto 120)
 
-;; --- Los átomos: todo el estado cambiante del programa vive acá ---
+;; --- Los átomos
 
 (def mundo
   "El mundo de la simulación: {:grilla ... :paso ...}."

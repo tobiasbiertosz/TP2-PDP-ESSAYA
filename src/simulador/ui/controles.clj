@@ -12,7 +12,7 @@
    :vidrio "vidrio"})
 
 (defn- crear-selector-material
-  "Lista de RadioButtons, uno por material, en el orden del enunciado."
+  "Lista de RadioButtons, uno por material"
   []
   (let [grupo (ToggleGroup.)
         cajas (for [material m/orden-materiales]

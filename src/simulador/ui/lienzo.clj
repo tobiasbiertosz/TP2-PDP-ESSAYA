@@ -12,10 +12,10 @@
   [argb]
   (let [canal (fn [desplazamiento]
                 (/ (bit-and (bit-shift-right argb desplazamiento) 0xFF) 255.0))]
-    (Color/color (double (canal 16))    ; rojo
-                 (double (canal 8))     ; verde
-                 (double (canal 0))     ; azul
-                 (double (canal 24))))) ; alfa
+    (Color/color (double (canal 16))    ;
+                 (double (canal 8))     ;
+                 (double (canal 0))     ;
+                 (double (canal 24))))) ;
 
 (def ^:private colores
   "Mapa material -> Color. Se calcula una sola vez, no en cada frame."

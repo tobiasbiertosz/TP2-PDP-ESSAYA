@@ -1,9 +1,8 @@
 (ns simulador.sim.materiales)
 
-;; Tabla de materiales (sección 5.2 del enunciado).
+;; Tabla de materiales
 ;; Cada material es un MAPA: {clave valor, clave valor, ...}
-;; Las claves que empiezan con ":" se llaman keywords.
-;; Si una propiedad no aparece, se usa el valor por defecto (ver funciones abajo).
+;; Si una propiedad no aparece, se usa el valor por defecto.
 
 (def materiales
   {:aire   {:simbolo \. :color 0xFF000000 :tipo :vacio}

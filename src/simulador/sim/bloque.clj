@@ -13,9 +13,8 @@
   (assoc bloque i (nth bloque j)
                 j (nth bloque i)))
 
-;; ---------------------------------------------------------------
-;; Etapa 1: decaimiento
-;; ---------------------------------------------------------------
+
+;; Decaimiento
 
 (defn- decaer
   "Recorre las posiciones 0 a 3. Si el material decae y se cumple la
@@ -30,9 +29,9 @@
     bloque
     (range 4)))
 
-;; ---------------------------------------------------------------
-;; Etapa 2: reacciones
-;; ---------------------------------------------------------------
+
+;; Reacciones
+
 
 ;; El número de par q es la posición en este vector.
 (def ^:private pares [[0 1] [2 3] [0 2] [1 3] [0 3] [1 2]])
@@ -54,9 +53,9 @@
     bloque
     (map-indexed vector pares)))
 
-;; ---------------------------------------------------------------
-;; Etapa 3: movimiento
-;; ---------------------------------------------------------------
+
+;; Movimiento
+
 
 (defn- permisos
   "Vector de 4 booleanos: ¿puede moverse la posición i en este paso?
@@ -110,9 +109,6 @@
         tras-fila-1 (deslizar permiso fase 15 false tras-caer [0 1])]
     (deslizar permiso fase 16 true tras-fila-1 [2 3])))
 
-;; ---------------------------------------------------------------
-;; Función pública: la regla completa del bloque
-;; ---------------------------------------------------------------
 
 (defn procesar-bloque
   "Dado un bloque (vector de 4 materiales) y su fase, devuelve el bloque
