@@ -22,6 +22,9 @@
 
 El proyecto consiste en desarrollar un simulador interactivo de materiales en una grilla de píxeles. Cada píxel contiene un material —como arena, agua, lava o vapor— que se comporta según reglas propias: la arena cae, el agua fluye, el vapor asciende y algunos materiales reaccionan al entrar en contacto. El usuario puede dibujar materiales con el mouse y observar cómo evoluciona la simulación.
 
+## Material audiovisual
+https://drive.google.com/file/d/1Bg3oTV_lHw9Q_g6Gm3KgeNaHSWciPUtE/view?usp=sharing 
+https://youtu.be/nlObbCql7lA
 
 ## Requisitos
 - JDK 21
